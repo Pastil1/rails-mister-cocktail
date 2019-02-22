@@ -1,0 +1,24 @@
+<div class="container">
+
+  <h1><%= @cocktail.name %></h1>
+
+  <% @cocktail.doses.each do |dose| %>
+    <div>
+      <%= dose.ingredient.name  %> : <%= dose.description %>
+    </div>
+  <% end %>
+
+  <h1>Change ingredients and doses for cocktail</h1>
+
+  <%= simple_form_for([@cocktail, @dose]) do |f| %>
+      <%= f.input :description %>
+      <%= f.association :ingredient %>
+      <%= f.submit %>
+  <% end %>
+
+
+
+
+  <%= link_to "Back to home page", cocktails_path %>
+
+</div>

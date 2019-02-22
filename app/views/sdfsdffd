@@ -1,0 +1,4 @@
+sdfsdffd
+<%= link_to  dose_path(dose.id) 'Delete', method: :delete, data: { confirm: 'Are you sure?' } %>
+<i class="fa fa-trash-o" aria-hidden="true"></i>
+<% end %>
